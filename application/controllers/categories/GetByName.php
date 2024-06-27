@@ -15,6 +15,15 @@ class GetByName extends CI_Controller{
      * @return json_encode Resultado de las categorias segun el nombre
      */
     public function run($name){
+      
+        if($name == '%20'){
+            $this->output
+            ->set_content_type('application/json')
+            ->set_output(json_encode([
+                'status' => '403'
+            ]));
+            return;
+        }
 
         $categories = $this->category_model->getByName($name);
 

@@ -62,3 +62,4 @@ $route['categories/update/(:num)']['post'] = 'categories/update/update/$1';
 $route['categories/delete/(:num)']['post'] = 'categories/delete/delete/$1';
 
 $route['categories/getAll']['get'] = 'categories/get/getAll';
+$route['categories/getByName/(:any)']['get'] = 'categories/getbyname/run/$1';

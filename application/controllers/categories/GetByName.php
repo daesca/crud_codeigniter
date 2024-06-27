@@ -19,7 +19,6 @@ class GetByName extends CI_Controller{
         $categories = $this->category_model->getByName($name);
 
         $this->output
-        // ->set_header('Access-Control-Allow-Origin: *')
         ->set_content_type('application/json')
         ->set_output(json_encode([
             'status' => '200',
